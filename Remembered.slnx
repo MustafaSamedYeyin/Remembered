@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Fe/">
+    <Project Path="Fe/Fe.esproj">
+      <Build />
+      <Deploy />
+    </Project>
+  </Folder>
+  <Project Path="RememberFramework/API.csproj" />
+</Solution>
