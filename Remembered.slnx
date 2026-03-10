@@ -1,9 +1,11 @@
 <Solution>
+  <Folder Name="/Be/">
+    <Project Path="API/API.csproj" Id="3e855797-ee84-4bd0-9550-e538e96ab53b" />
+  </Folder>
   <Folder Name="/Fe/">
     <Project Path="Fe/Fe.esproj">
       <Build />
       <Deploy />
     </Project>
   </Folder>
-  <Project Path="RememberFramework/API.csproj" />
 </Solution>

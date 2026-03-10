@@ -1,5 +1,5 @@
 
-namespace RememberFramework
+namespace API
 {
     public class Program
     {
@@ -22,8 +22,6 @@ namespace RememberFramework
             }
 
             app.UseHttpsRedirection();
-
-            
 
             app.UseAuthorization();
 
