@@ -12,6 +12,8 @@ namespace API
 
             builder.Services.AddDbContext<LearningDbContext>();
             builder.Services.AddScoped(typeof(GenericRepository<>));
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
 
             // Add services to the container.
 
@@ -30,6 +32,9 @@ namespace API
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
+
+            app.UseSwagger();
+            app.UseSwaggerUI();
 
 
             app.MapControllers();
