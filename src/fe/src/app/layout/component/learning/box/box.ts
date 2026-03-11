@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Splitter } from "primeng/splitter";
 
 @Component({
   selector: 'app-box',
-  imports: [],
+  imports: [Splitter],
   templateUrl: './box.html',
 })
 export class Box {

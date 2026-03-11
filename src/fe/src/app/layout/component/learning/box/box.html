@@ -1,0 +1,44 @@
+<p-splitter [style]="{ height: '600px' }" [minSizes]="[10, 0]" layout="vertical">
+    <ng-template #panel>
+        <p-splitter [style]="{ height: '300px' }" [minSizes]="[10, 0]" styleClass="mb-8">
+            <ng-template #panel>
+                <div class="col flex items-center justify-center">Yakında</div>
+            </ng-template>
+            <ng-template #panel>
+                <div class="col flex items-center justify-center">Sonra</div>
+            </ng-template>
+            <ng-template #panel>
+                <div class="col flex items-center justify-center">Arşiv</div>
+            </ng-template>
+        </p-splitter>
+    </ng-template>
+
+    <ng-template #panel>
+        <p-splitter [style]="{ height: '300px' }" [minSizes]="[10, 0]" styleClass="mb-8">
+            <ng-template #panel>
+                <div class="col flex items-center justify-center">Pazartesi</div>
+            </ng-template>
+            <ng-template #panel>
+                <div class="col flex items-center justify-center">Pazartesi</div>
+            </ng-template>
+            <ng-template #panel>
+                <div class="col flex items-center justify-center">Salı</div>
+            </ng-template>
+            <ng-template #panel>
+                <div class="col flex items-center justify-center">Çarşamba</div>
+            </ng-template>
+            <ng-template #panel>
+                <div class="col flex items-center justify-center">Perşembe</div>
+            </ng-template>
+            <ng-template #panel>
+                <div class="col flex items-center justify-center">Cuma</div>
+            </ng-template>
+            <ng-template #panel>
+                <div class="col flex items-center justify-center">Cumartesi</div>
+            </ng-template>
+            <ng-template #panel>
+                <div class="col flex items-center justify-center">Pazar</div>
+            </ng-template>
+        </p-splitter>
+    </ng-template>
+</p-splitter>
