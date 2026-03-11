@@ -1,6 +1,6 @@
 ﻿namespace API.Enums
 {
-    public class BoxTypeEnum
+    public enum BoxTypeEnum
     {
         Monday=1,
         Tuesday=2,

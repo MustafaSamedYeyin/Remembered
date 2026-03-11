@@ -1,4 +1,6 @@
 
+using API.Data;
+
 namespace API
 {
     public class Program
@@ -7,6 +9,9 @@ namespace API
         {
             var builder = WebApplication.CreateBuilder(args);
 
+
+            builder.Services.AddDbContext<LearningDbContext>();
+            builder.Services.AddScoped(typeof(GenericRepository<>));
 
             // Add services to the container.
 
