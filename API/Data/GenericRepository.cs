@@ -12,28 +12,30 @@ namespace API.Data
             _learningDbContext = learningDbContext;
             _entity = _learningDbContext.Set<T>();
         }
-        public void Post(T entity)
+        public async Task<T> Post(T entity)
         {
-            _entity.Add(entity);
-            _learningDbContext.SaveChanges();
+            var result = await _entity.AddAsync(entity);
+            await _learningDbContext.SaveChangesAsync();
+            return result.Entity;
         }
-        public void Put(T entity)
+        public async Task<T> Put(T entity)
         {
-            _entity.Update(entity);
-            _learningDbContext.SaveChanges();
+            var result = _entity.Update(entity);
+            await _learningDbContext.SaveChangesAsync();
+            return result.Entity;
         }
-        public void Delete(T entity)
+        public async Task Delete(T entity)
         {
             _entity.Remove(entity);
-            _learningDbContext.SaveChanges();
+            await _learningDbContext.SaveChangesAsync();
         }
-        public T Get(int id)
+        public async Task<T> Get(Guid id)
         {
-            return _entity.Find(id);
+            return await _entity.AsNoTracking().FirstOrDefaultAsync(i=> i.Id == id);
         }
-        public List<T> GetAll()
+        public async Task<List<T>> GetAll()
         {
-            return _entity.ToList();
+            return await _entity.AsNoTracking().ToListAsync();
 
         }
     }

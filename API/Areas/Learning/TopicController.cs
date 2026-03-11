@@ -1,4 +1,5 @@
-﻿using API.Entities;
+﻿using API.Data;
+using API.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,5 +9,8 @@ namespace API.Areas.Learning
     [ApiController]
     public class TopicController : BaseController<Topic>
     {
+        public TopicController(GenericRepository<Topic> genericRepository) : base(genericRepository)
+        {
+        }
     }
 }
