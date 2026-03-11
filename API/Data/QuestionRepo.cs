@@ -1,6 +1,8 @@
 ﻿namespace API.Data
 {
-    public class QuestionRepo
+    public class QuestionRepo : GenericRepository<Question>
     {
+        public QuestionRepo(LearningDbContext learningDbContext) : base(learningDbContext)
+        {
     }
 }
